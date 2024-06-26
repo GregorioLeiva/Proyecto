@@ -1,15 +1,80 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <h1>Prueba de Guardado en mi rama Repositorio git 1</h1>
-    <h3>Martochx</h3>
-    <script type="module" src="./main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetarios App</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="./imgs/logoreceta.png" alt="Logo de pagina" width="120" height="90">
+        <!-- Falta colocar el logo para el navbar -->
+      </a>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#popular-dishes">Platos populares</a></li>
+        <li><a href="#contacts">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="container">
+    <h3 id="popular-dishes">
+      Platos populares
+    </h3>
+    <div class="card">
+      <a href="./recipes.html?food=noodles">
+        <h2>Fideos</h2>
+        <img src="./imgs/fideos.jfif" alt="fideos" height="250" width="280">
+      </a>
+    </div>
+    <div class="card">
+      <a href="./recipes.html?food=chicken">
+        <h2>Pollo</h2>
+        <img src="./imgs/pollo.jpg" alt="fideos" height="250" width="280">
+      </a>
+    </div>
+    <div class="card">
+      <a href="./recipes.html?food=soup">
+        <h2>Sopa</h2>
+        <img src="./imgs/sopa.jfif" alt="fideos" height="250" width="280">
+      </a>
+    </div>
+    <div class="card">
+      <a href="./recipes.html?food=burguer">
+        <h2>Hamburguesas</h2>
+        <img src="./imgs/hamburguesa.jpg" alt="fideos" height="250" width="280">
+      </a>
+    </div>
+    <div class="card">
+      <a href="./recipes.html?food=fish">
+        <h2>Pescado</h2>
+        <img src="./imgs/pescado.webp" alt="fideos" height="250" width="280">
+      </a>
+    </div>
+    <div class="card">
+      <a href="./recipes.html?food=pizza">
+        <h2>Pizza</h2>
+        <img src="./imgs/pizza.webp" alt="fideos" height="250" width="280">
+      </a>
+    </div>
+  </main>
+
+
+  <footer>
+    <h3 id="contacts">Contacto</h3>
+    <li><b>Correa</b></li>
+    <li><b>Leiva</b></li>
+    <li><b>Scaricich</b></li>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
 </html>
