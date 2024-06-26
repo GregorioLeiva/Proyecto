@@ -1,13 +1,52 @@
-/* styles.css */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  color: #fff;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+h3{
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.card a{
+  text-decoration: none;
+  color: #333;
+
+}
 .card {
-  display: inline-block;
-  width: 200px;
-  height: 150px;
+  display: flex;
+  width: 300px;
+  height: 300px;
   border: 1px solid #ccc;
   margin: 10px;
   padding: 10px;
   text-align: center;
-  text-decoration: none;
+  justify-content: center;
   color: #333;
 }
 
@@ -28,4 +67,24 @@
 
 .recipe-card p {
   margin: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+ul {
+  list-style: none; 
+  padding: 0; 
+}
+
+li {
+  display: inline-block;
+  margin: 10px; 
+}
+
+.img-recipes {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
