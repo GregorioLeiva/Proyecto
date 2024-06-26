@@ -1,96 +1,143 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body
+{
+    background-color: #444;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
   }
-  a:hover {
-    color: #747bff;
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: #fff;
   }
-  button {
-    background-color: #f9f9f9;
+  
+  .navbar a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    border: 1px solid #fff;
+    transition: border-color 0.3s;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: #000000;
   }
+
+  .navbar a:hover
+  {
+    border-color: rgb(255, 196, 0);
+    transition: border-color 0.3s;
+    color: rgb(255, 196, 0);
+    transition: color 0.3s;
+  }
+  
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1d;
+  }
+  
+  h3{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+  }
+  .card a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .card {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    color: #333;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  
+  .card:hover {
+
+    a
+    {
+        color: rgb(255, 196, 0);
+        transition: color 0.3s;
+    }
+
+    background-color: rgb(68, 68, 68);
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .recipe-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .recipe-card h3 {
+    margin: 5px 0;
+  }
+  
+  .recipe-card p {
+    margin: 0;
+  }
+
+  .recipes-container p
+  {
+    color: #fff;
+  }
+  
+  footer {
+    margin: 20px;
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  ul {
+    list-style: none; 
+    padding: 0; 
+  }
+  
+  li {
+    display: inline-block;
+    margin: 10px; 
+  }
+  
+  .img-recipes {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+.container .card img
+{
+    margin-top: 10px;
+    border-radius: 25px;
 }
