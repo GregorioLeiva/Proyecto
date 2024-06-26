@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // sacamos el parametro de comida
   const urlParams = new URLSearchParams(window.location.search);
   const food = urlParams.get('food');
-  const TU_API_KEY = '42125001a1334f56aa22b7d4b7f27732';
+  const TU_API_KEY = 'ea7f5a93b87842c6a5f51d5c1f869dba';
 
   // consulta a la api de spoonacular
   fetch(`https://api.spoonacular.com/recipes/search?query=${food}&number=10&apiKey=${TU_API_KEY}`)
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
           .then(details => {
             recipeCard.innerHTML = `
               <h3>${details.title}</h3>
-              <img src="${details.image}" alt="${details.title}" />
+              <img src="${details.image}" alt="${details.title} class="img-recipes"" />
               <p>${details.summary}</p>
             `;
             recipesContainer.appendChild(recipeCard);
