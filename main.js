@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // sacamos el parametro de comida
     const urlParams = new URLSearchParams(window.location.search);
     const food = urlParams.get('food');
-    const TU_API_KEY = '1b20b4169a364da2b12c0963801dde42';
+    const TU_API_KEY = '8c3b2cb143f2456aa26271ab961ac0ce';
   
     // consulta a la api de spoonacular
     fetch(`https://api.spoonacular.com/recipes/search?query=${food}&number=10&apiKey=${TU_API_KEY}`)
