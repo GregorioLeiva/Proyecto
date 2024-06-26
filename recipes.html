@@ -8,11 +8,12 @@
 </head>
 <body>
     <h1>Buscar Recetas</h1>
-    <div id="foodCards">
-        <a href="recipes.html" class="card">Fideos</a>
-        <a href="recipes.html" class="card">Sopa</a>
-        <a href="recipes.html" class="card">Pollo</a>
-        <!-- Agrega más tarjetas según necesites -->
-    </div>
+    <form id="searchForm">
+        <input type="text" id="query" placeholder="Ingrese un ingrediente" required>
+        <button type="submit">Buscar</button>
+    </form>
+    <div id="recipes"></div>
+
+    <script src="main.js"></script>
 </body>
 </html>
