@@ -1,13 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="path/to/logo.png" alt="Logo de pagina">
+        <!-- Falta colocar el logo para el navbar -->
+      </a>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#popular-dishes">Platos populares</a></li>
+        <li><a href="#recommendations">Recomendaciones</a></li>
+        <li><a href="#contacts">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h3 id="popular-dishes">
+      Platos populares
+    </h3>
+    <div class="card">
+      <a href="recipes.html?food=noodles">
+        <h2>Fideos</h2>
+      </a>
+    </div>
+    <div class="card">
+      <a href="recipes.html?food=chicken">
+        <h2>Pollo</h2>
+      </a>
+    </div>
+    <div class="card">
+      <a href="recipes.html?food=soup">
+        <h2>Sopa</h2>
+      </a>
+    </div>
+    <div class="card">
+      <a href="recipes.html?food=burguer">
+        <h2>Hamburguesa</h2>
+      </a>
+    </div>
+    <div class="card">
+      <a href="recipes.html?food=fish">
+        <h2>Pescado</h2>
+      </a>
+    </div>
+    <div class="card">
+      <a href="recipes.html?food=pizza">
+        <h2>Pizza</h2>
+      </a>
+    </div>
+  </main>
+  <div id = "recommendations">
+    <h3 id="recommendations">Recomendaciones</h3>
+
+  </div>
+  <footer>
+    <h3 id="contacts">Contacto</h3>
+    <li><b>Correa</b></li>
+    <li><b>Leiva</b></li>
+    <li><b>Scaricich</b></li>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
