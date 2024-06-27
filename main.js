@@ -21,9 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
           .then(response => response.json())
           .then(details => {
             recipeCard.innerHTML = `
+            <div class="card-recipes">
               <h3>${details.title}</h3>
               <img src="${details.image}" alt="${details.title} class="img-recipes"" />
               <p>${details.summary}</p>
+              </div>
             `;
             recipesContainer.appendChild(recipeCard);
           })
