@@ -153,6 +153,7 @@ main{
     text-align: center;
     background-color: #916953;
     color: white;
+    bottom: 0;
   }
   .mails{
     padding: 10px;
