@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // sacamos el parametro de comida
   const urlParams = new URLSearchParams(window.location.search);
   const food = urlParams.get('food');
-  const TU_API_KEY = 'ea7f5a93b87842c6a5f51d5c1f869dba';
+  const { API_KEY: apiKey } = import.meta.env;
 
   // consulta a la api de spoonacular
-  fetch(`https://api.spoonacular.com/recipes/search?query=${food}&number=10&apiKey=${TU_API_KEY}`)
+  fetch(`https://api.spoonacular.com/recipes/search?query=${food}&number=10&apiKey=${apiKey}`)
     .then(response => response.json())
     .then(data => {
       // manipulacion de datos
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         recipeCard.classList.add('recipe-card');
 
         // Hacer una solicitud adicional para obtener detalles de la receta
-        fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${TU_API_KEY}`)
+        fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${TapiKey}`)
           .then(response => response.json())
           .then(details => {
             recipeCard.innerHTML = `
