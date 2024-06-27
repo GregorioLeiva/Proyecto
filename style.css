@@ -1,90 +1,210 @@
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
 }
-.navbar{
+body
+{
+    background-color: white;
+}
+
+
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+.container__menu{
+  width: 100%;
+  height: 75px;
+  background-color: #916953;
+  padding: 0 20px;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+}
+
+.menu{
+  margin: auto;
+  height: 100%;
+}
+
+nav{ height: 100%; }
+
+nav > ul{
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+nav ul li{
+  height: 100%;
   list-style: none;
-  color: #fff;
+  position: relative;
 }
 
-.navbar a{
-  text-decoration: none;
-  color: #fff;
-}
-
-.container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-h3{
+nav > ul > li > a{
   width: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-}
-.card a{
-  text-decoration: none;
-  color: #333;
-
-}
-.card {
+  height: 100%;
   display: flex;
-  width: 300px;
-  height: 300px;
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  justify-content: center;
-  color: #333;
+  align-items: center;
+  padding: 14px;
+  color: white;
+  font-size: 18px;
+  transition: all 300ms ease;
 }
 
-.card:hover {
-  background-color: #f0f0f0;
+nav > ul > li > a:hover{
+  transform: scale(1.04);
+  background: #7e5a47;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+}
+
+main{
+  background: white;
+  margin-top: 30px;
+}
+
+
+.icon__menu{
+  font-size: 26px;
+  color: white;
   cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
 }
 
-.recipe-card {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+#label__check{
+  width: 26px;
+  height: 100%;
+  display: none;
 }
 
-.recipe-card h3 {
-  margin: 5px 0;
+#check__menu{ display: none; }
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  h3{
+    color: white;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+  }
+  
+  .card a{
+    text-decoration: none;
+    color: #916953;
+  }
+  
+  .card {
+    display: flex;
+    width: 300px;
+    height: 310px;
+    border: 1px solid #916953;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    color: #333;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  }
+  
+  .card:hover {
+    border: 2px solid #916953;
+    cursor: pointer;
+  }
+  
+  .recipe-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+  }
+  
+  .recipe-card h3 {
+    margin: 5px 0;
+  }
+  
+  .recipe-card p {
+    margin: 0;
+  }
+
+  .recipes-container p
+  {
+    color: white;
+  }
+  
+  footer {
+    width: 100%;
+    text-align: center;
+    background-color: #916953;
+    color: white;
+  }
+  .mails{
+    padding: 10px;
+  }
+
+  .img-recipes {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+.container .card img
+{
+    margin-top: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 }
 
-.recipe-card p {
-  margin: 0;
+
+@media screen and (max-width: 720px){
+
+  nav > ul{
+      flex-direction: column;
+      background-color: #916953;
+      position: fixed;
+      left: 0;
+      top: 70px;
+      width: 100%;
+      height: 0px;
+      transition: all 300ms ease;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+  }
+
+  nav > ul > li > a:hover{ transform: scale(1); background: #7e5a47;}
+
+  nav ul li ul{ left: 90px; }
+
+  nav > ul > li:hover ul{ top: 50px; }
+
+  #label__check{ display: block; }
+
+  .icon__menu{ display: flex; }
+
+  #check__menu:checked ~ nav > ul{
+      height: 300px;
+      visibility: visible;
+      opacity: 1;
+  }
+
+  main{ margin-top: 30px; }
 }
 
-footer {
-  text-align: center;
-}
-
-ul {
-  list-style: none; 
-  padding: 0; 
-}
-
-li {
-  display: inline-block;
-  margin: 10px; 
-}
-
-.img-recipes {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}

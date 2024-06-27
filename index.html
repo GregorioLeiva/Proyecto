@@ -1,69 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recetario</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Recetarios App</title>
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="./imgs/logoreceta.png">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <a href="index.html">
-        <img src="path/to/logo.png" alt="Logo de pagina">
-        <!-- Falta colocar el logo para el navbar -->
-      </a>
+
+  <header>
+    <div class="container__menu">
+        <div class="menu">
+            <input type="checkbox" id="check__menu">
+            <label for="check__menu" id="label__check">
+                <i class="fas fa-bars icon__menu"></i>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#popular-dishes">Platos populares</a></li>
+                    <li><a href="#contacts">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#popular-dishes">Platos populares</a></li>
-        <li><a href="#contacts">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+</header>
+
+
   <main class="container">
     <h3 id="popular-dishes">
       Platos populares
     </h3>
     <div class="card">
-      <a href="recipes.html?food=noodles">
+      <a href="./recipes.html?food=noodles">
         <h2>Fideos</h2>
+        <img src="./imgs/fideos.jfif" alt="fideos" height="250" width="280">
       </a>
     </div>
     <div class="card">
-      <a href="recipes.html?food=chicken">
+      <a href="./recipes.html?food=chicken">
         <h2>Pollo</h2>
+        <img src="./imgs/pollo.jpg" alt="fideos" height="250" width="280">
       </a>
     </div>
     <div class="card">
-      <a href="recipes.html?food=soup">
+      <a href="./recipes.html?food=soup">
         <h2>Sopa</h2>
+        <img src="./imgs/sopa.jfif" alt="fideos" height="250" width="280">
       </a>
     </div>
     <div class="card">
-      <a href="recipes.html?food=burguer">
-        <h2>Hamburguesa</h2>
+      <a href="./recipes.html?food=burguer">
+        <h2>Hamburguesas</h2>
+        <img src="./imgs/hamburguesa.jpg" alt="fideos" height="250" width="280">
       </a>
     </div>
     <div class="card">
-      <a href="recipes.html?food=fish">
+      <a href="./recipes.html?food=fish">
         <h2>Pescado</h2>
+        <img src="./imgs/pescado.webp" alt="fideos" height="250" width="280">
       </a>
     </div>
     <div class="card">
-      <a href="recipes.html?food=pizza">
+      <a href="./recipes.html?food=pizza">
         <h2>Pizza</h2>
+        <img src="./imgs/pizza.webp" alt="fideos" height="250" width="280">
       </a>
     </div>
   </main>
-  <footer>
-    <h3 id="contacts">Contacto</h3>
-    <li><b>Correa</b></li>
-    <li><b>Leiva</b></li>
-    <li><b>Scaricich</b></li>
+
+
+  <footer id="contacts">
+  <div class="mails">
+    <small><b>Federico Correa</b> - fcorrea@frsn.utn.edu.ar</small>
+    <small><b><br>Martin Scaricich</b> - mscaricich@frsn.utn.edu.ar</small>
+    <small><b><br>Gregorio Leiva</b> - gleiva@frsn.utn.edu.ar</small>
+  </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
