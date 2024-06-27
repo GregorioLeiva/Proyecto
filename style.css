@@ -1,96 +1,210 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body
+{
+    background-color: white;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
 }
 
-body {
-  margin: 0;
+.container__menu{
+  width: 100%;
+  height: 75px;
+  background-color: #916953;
+  padding: 0 20px;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+}
+
+.menu{
+  margin: auto;
+  height: 100%;
+}
+
+nav{ height: 100%; }
+
+nav > ul{
+  height: 100%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+nav ul li{
+  height: 100%;
+  list-style: none;
+  position: relative;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+nav > ul > li > a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  color: white;
+  font-size: 18px;
+  transition: all 300ms ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+nav > ul > li > a:hover{
+  transform: scale(1.04);
+  background: #7e5a47;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 }
 
-.card {
-  padding: 2em;
+main{
+  background: white;
+  margin-top: 30px;
 }
 
-.read-the-docs {
-  color: #888;
-}
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.icon__menu{
+  font-size: 26px;
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#label__check{
+  width: 26px;
+  height: 100%;
+  display: none;
 }
+
+#check__menu{ display: none; }
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  h3{
+    color: white;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+  }
+  
+  .card a{
+    text-decoration: none;
+    color: #916953;
+  }
+  
+  .card {
+    display: flex;
+    width: 300px;
+    height: 310px;
+    border: 1px solid #916953;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    color: #333;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  }
+  
+  .card:hover {
+    border: 2px solid #916953;
+    cursor: pointer;
+  }
+  
+  .recipe-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+  }
+  
+  .recipe-card h3 {
+    margin: 5px 0;
+  }
+  
+  .recipe-card p {
+    margin: 0;
+  }
+
+  .recipes-container p
+  {
+    color: white;
+  }
+  
+  footer {
+    width: 100%;
+    text-align: center;
+    background-color: #916953;
+    color: white;
+  }
+  .mails{
+    padding: 10px;
+  }
+
+  .img-recipes {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+.container .card img
+{
+    margin-top: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+
+@media screen and (max-width: 720px){
+
+  nav > ul{
+      flex-direction: column;
+      background-color: #916953;
+      position: fixed;
+      left: 0;
+      top: 70px;
+      width: 100%;
+      height: 0px;
+      transition: all 300ms ease;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+  }
+
+  nav > ul > li > a:hover{ transform: scale(1); background: #7e5a47;}
+
+  nav ul li ul{ left: 90px; }
+
+  nav > ul > li:hover ul{ top: 50px; }
+
+  #label__check{ display: block; }
+
+  .icon__menu{ display: flex; }
+
+  #check__menu:checked ~ nav > ul{
+      height: 300px;
+      visibility: visible;
+      opacity: 1;
+  }
+
+  main{ margin-top: 30px; }
+}
+
